@@ -36,7 +36,7 @@ export const accommodations: Accommodation[] = [
       'Toalha (aluguel à parte) [PREENCHER]',
     ],
     photos: [
-      { src: ph('dorm-misto-quarto.svg'), alt: 'Dormitório misto com beliches de madeira (foto ilustrativa)' },
+      { src: '/fotos/dorm-misto.webp', alt: 'Dormitório com beliches de madeira e janela para as montanhas (imagem ilustrativa)' },
       { src: ph('dorm-misto-banheiro.svg'), alt: 'Banheiro compartilhado do dormitório misto (foto ilustrativa)' },
       { src: ph('dorm-misto-vista.svg'), alt: 'Vista da janela para o jardim (foto ilustrativa)' },
     ],
@@ -68,7 +68,7 @@ export const accommodations: Accommodation[] = [
       'Tomada e luz de leitura em cada cama',
     ],
     photos: [
-      { src: ph('dorm-feminino-quarto.svg'), alt: 'Dormitório feminino com dois beliches (foto ilustrativa)' },
+      { src: '/fotos/dorm-feminino.webp', alt: 'Dormitório feminino com beliches de madeira e cortinas rosadas (imagem ilustrativa)' },
       { src: ph('dorm-feminino-banheiro.svg'), alt: 'Banheiro exclusivo do dormitório feminino (foto ilustrativa)' },
       { src: ph('dorm-feminino-vista.svg'), alt: 'Vista das montanhas a partir do quarto (foto ilustrativa)' },
     ],
@@ -92,7 +92,7 @@ export const accommodations: Accommodation[] = [
     amenities: ['wifi', 'cafe', 'ventilador', 'tomada', 'roupa-de-cama', 'toalha', 'banheiro-privativo', 'varanda'],
     included: ['Roupa de cama', 'Toalhas', 'Café da manhã', 'Ventilador', 'Tomadas ao lado da cama', 'Varanda com rede'],
     photos: [
-      { src: ph('casal-quarto.svg'), alt: 'Quarto casal com cama de casal (foto ilustrativa)' },
+      { src: '/fotos/quarto-casal.webp', alt: 'Quarto casal com cama de casal e janela para o morro (imagem ilustrativa)' },
       { src: ph('casal-banheiro.svg'), alt: 'Banheiro privativo do quarto casal (foto ilustrativa)' },
       { src: ph('casal-vista.svg'), alt: 'Varanda com rede e vista para o morro (foto ilustrativa)' },
     ],
@@ -116,7 +116,7 @@ export const accommodations: Accommodation[] = [
     amenities: ['wifi', 'cafe', 'ventilador', 'tomada', 'roupa-de-cama', 'toalha', 'banheiro-privativo'],
     included: ['Roupa de cama', 'Toalhas', 'Café da manhã', 'Ventilador', 'Tomadas individuais', 'Armário grande'],
     photos: [
-      { src: ph('familia-quarto.svg'), alt: 'Quarto família com cama de casal e beliche (foto ilustrativa)' },
+      { src: '/fotos/quarto-familia.webp', alt: 'Quarto família com cama de casal e beliche (imagem ilustrativa)' },
       { src: ph('familia-banheiro.svg'), alt: 'Banheiro privativo do quarto família (foto ilustrativa)' },
       { src: ph('familia-vista.svg'), alt: 'Vista do jardim a partir do quarto família (foto ilustrativa)' },
     ],

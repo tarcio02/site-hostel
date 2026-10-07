@@ -1,5 +1,6 @@
 import { experiences, partnerGuides, villageTips } from '../data/content'
 import { Icon } from '../components/ui/Icon'
+import { LazyImage } from '../components/ui/LazyImage'
 import { Section } from '../components/ui/Section'
 import { SectionTitle } from '../components/ui/SectionTitle'
 import { Tag } from '../components/ui/Tag'
@@ -15,15 +16,17 @@ export function Valley() {
 
       <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {experiences.map((e) => (
-          <li key={e.title} className="relative overflow-hidden rounded-artesanal border border-marrom/20 bg-creme p-5 pt-7">
-            <span className={`absolute inset-x-0 top-0 h-2 ${stripe[e.accent]}`} aria-hidden="true" />
-            <Icon name="montanha" size={30} className="mb-3 text-terracota" />
-            <h3 className="text-xl">{e.title}</h3>
-            <div className="my-3 flex flex-wrap gap-2">
-              <Tag accent={e.accent}>{e.level}</Tag>
-              <Tag accent={e.accent}>{e.duration}</Tag>
+          <li key={e.title} className="overflow-hidden rounded-artesanal border border-marrom/20 bg-creme">
+            <LazyImage src={e.photo.src} alt={e.photo.alt} width={640} height={480} className="aspect-[4/3] w-full" />
+            <span className={`block h-2 ${stripe[e.accent]}`} aria-hidden="true" />
+            <div className="p-5">
+              <h3 className="text-xl">{e.title}</h3>
+              <div className="my-3 flex flex-wrap gap-2">
+                <Tag accent={e.accent}>{e.level}</Tag>
+                <Tag accent={e.accent}>{e.duration}</Tag>
+              </div>
+              <p className="leading-relaxed">{e.text}</p>
             </div>
-            <p className="leading-relaxed">{e.text}</p>
           </li>
         ))}
       </ul>

@@ -1,4 +1,4 @@
-import type { AccentColor } from '../types'
+import type { AccentColor, Photo } from '../types'
 import type { IconName } from '../components/ui/Icon'
 import { siteConfig } from '../config/site'
 
@@ -15,9 +15,9 @@ export const about = {
     'Aqui a ideia é simples: um lugar tranquilo para dormir bem, cozinhar junto, trocar dicas de trilha e voltar para casa com o pé sujo de terra vermelha e a cabeça leve.',
   ],
   photos: [
-    { src: '/placeholders/sobre-casa.svg', alt: 'Fachada da casa do hostel (foto ilustrativa)' },
-    { src: '/placeholders/sobre-jardim.svg', alt: 'Jardim com redes (foto ilustrativa)' },
-    { src: '/placeholders/sobre-cozinha.svg', alt: 'Cozinha compartilhada (foto ilustrativa)' },
+    { src: '/fotos/sobre-fachada.webp', alt: 'Entrada do hostel com jardim, varanda e vista para os morros (imagem ilustrativa)' },
+    { src: '/fotos/sobre-dormitorio.webp', alt: 'Dormitório com beliches de madeira (imagem ilustrativa)' },
+    { src: '/fotos/sobre-varanda.webp', alt: 'Rede na varanda com o pôr do sol no Vale (imagem ilustrativa)' },
   ],
 }
 
@@ -45,11 +45,14 @@ export interface Experience {
   duration: string
   text: string
   accent: AccentColor
+  /** Imagem ilustrativa, não é do lugar exato. [PREENCHER] trocar por foto real. */
+  photo: Photo
 }
 
 export const experiences: Experience[] = [
   {
     title: 'Cachoeira da Fumaça',
+    photo: { src: '/fotos/cachoeira-2.webp', alt: 'Queda d’água alta caindo de um paredão de pedra (imagem ilustrativa)' },
     level: 'Moderada',
     duration: 'Dia inteiro',
     accent: 'azul',
@@ -57,6 +60,7 @@ export const experiences: Experience[] = [
   },
   {
     title: 'Riachinho',
+    photo: { src: '/fotos/cachoeira-3.webp', alt: 'Cachoeira em degraus de pedra com poço para banho (imagem ilustrativa)' },
     level: 'Leve',
     duration: 'Meio período',
     accent: 'verde',
@@ -64,6 +68,7 @@ export const experiences: Experience[] = [
   },
   {
     title: 'Águas Claras',
+    photo: { src: '/fotos/cachoeira-4.webp', alt: 'Poço de água verde-clara ao pé de uma cachoeira (imagem ilustrativa)' },
     level: 'Leve a moderada',
     duration: 'Meio período',
     accent: 'pessego',
@@ -71,6 +76,7 @@ export const experiences: Experience[] = [
   },
   {
     title: 'Vale do Pati',
+    photo: { src: '/fotos/cachoeira-1.webp', alt: 'Cachoeira entre a mata com morros ao fundo (imagem ilustrativa)' },
     level: 'Travessia',
     duration: '3 a 5 dias',
     accent: 'lilas',

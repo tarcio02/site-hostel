@@ -4,3 +4,6 @@ dist
 .env
 .env.*
 *.local
+
+# fotos em alta resolução (as versões otimizadas ficam em public/fotos)
+fotos-originais
