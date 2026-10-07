@@ -10,8 +10,10 @@ Próximas etapas: calendário do Booking via iCal (função serverless na Vercel
 
 - React 19 + Vite + TypeScript (strict)
 - Tailwind CSS v4 via `@tailwindcss/vite`. Os tokens ficam em `@theme` no `src/index.css`; não existe `tailwind.config.js`
-- React Router (`createBrowserRouter`) com as rotas `/`, `/acomodacoes/:slug` e `*` (404)
-- Deploy na Vercel: o `vercel.json` reescreve tudo para `index.html` (SPA)
+- React Router (`createBrowserRouter`) com as rotas `/`, `/acomodacoes/:slug` e `*` (404), definidas em `src/routes.tsx`
+- **Pré-renderização no build:** `npm run build` gera um HTML pronto por página (`dist/index.html`, `dist/acomodacoes/<slug>.html`, `dist/404.html`), mais `sitemap.xml` e `robots.txt`. As meta tags, o canonical, o Open Graph e o JSON-LD de cada página ficam em `src/seo.ts`; o script é `scripts/prerender.mjs`, que usa `src/entry-server.tsx`. No navegador o React desenha de novo com `createRoot` (sem hidratação). Página nova = acrescentar em `pages` no `src/seo.ts`
+- Deploy na Vercel: `vercel.json` com `cleanUrls` e **sem** rewrite geral; endereço inexistente recebe o `404.html` com status 404
+- Imagens de prévia de link: `public/og/<id>.jpg` (1200x630, JPG). O endereço público fica em `siteConfig.siteUrl`
 - **Sem bibliotecas extras de propósito.** Os ícones são SVGs próprios em `components/ui/Icon.tsx`; datas são tratadas em `lib/dates.ts`; o calendário é próprio. Antes de adicionar uma dependência, confirme que ela é realmente necessária: a maioria dos visitantes chega pelo Instagram, no celular, muitas vezes com sinal fraco.
 
 Comandos: `npm run dev`, `npm run build` (roda `tsc` e depois `vite build`), `npm run preview`.
