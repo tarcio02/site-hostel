@@ -57,8 +57,8 @@ const hostelLd = () => {
       postalCode: filled(a.zip),
       addressCountry: 'BR',
     },
-    // [PREENCHER] incluir telephone (siteConfig.whatsappDisplay) e geo (latitude/longitude)
-    // quando os dados reais estiverem em config/site.ts
+    telephone: `+${siteConfig.whatsapp}`,
+    // [PREENCHER] incluir geo (latitude/longitude) quando houver os dados reais
     checkinTime: filled(siteConfig.checkInTime),
     checkoutTime: filled(siteConfig.checkOutTime),
     sameAs: [filled(siteConfig.instagram.url)].filter(Boolean),

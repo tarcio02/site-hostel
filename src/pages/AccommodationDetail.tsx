@@ -107,7 +107,7 @@ export function AccommodationDetail() {
             <aside aria-labelledby="reservar-title" className="lg:sticky lg:top-24 lg:self-start">
               <div id="reservar" className="rounded-artesanal border border-marrom/25 bg-creme-claro/70 p-4 shadow-[0_18px_40px_-24px_rgba(74,52,38,0.6)] sm:p-6">
                 <h2 id="reservar-title" className="mb-4 text-2xl">
-                  Disponibilidade e reserva
+                  Reserve sua estadia
                 </h2>
                 <BookingBox accommodation={acc} />
               </div>

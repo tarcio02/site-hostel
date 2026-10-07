@@ -2,8 +2,7 @@ import type { Accommodation } from '../types'
 
 /*
  * DADOS DE EXEMPLO — nomes, preços, camas e fotos são fictícios.
- * [PREENCHER] com as acomodações reais. O `id` precisa bater com o
- * usado na fonte de disponibilidade (mock agora, iCal/Supabase depois).
+ * [PREENCHER] com as acomodações reais.
  */
 
 const ph = (file: string) => `/placeholders/${file}`
@@ -20,7 +19,6 @@ export const accommodations: Accommodation[] = [
     description:
       '[PREENCHER] Descrição real. Exemplo: dormitório arejado com três beliches de madeira, cortina individual em cada cama e janela para o jardim. Ótimo para quem chega para fazer trilhas e quer conhecer gente da estrada.',
     capacity: 6,
-    units: 6,
     beds: ['3 beliches (6 camas de solteiro)'],
     bathroom: 'compartilhado',
     priceFrom: 80,
@@ -52,7 +50,6 @@ export const accommodations: Accommodation[] = [
     description:
       '[PREENCHER] Descrição real. Exemplo: dormitório exclusivo para mulheres, com dois beliches, espelho grande, cabideiro e banheiro de uso exclusivo das hóspedes do quarto.',
     capacity: 4,
-    units: 4,
     beds: ['2 beliches (4 camas de solteiro)'],
     bathroom: 'privativo',
     priceFrom: 90,
@@ -83,7 +80,6 @@ export const accommodations: Accommodation[] = [
     description:
       '[PREENCHER] Descrição real. Exemplo: quarto privativo aconchegante com cama de casal, banheiro próprio e varanda com rede para descansar depois da trilha.',
     capacity: 2,
-    units: 1,
     beds: ['1 cama de casal'],
     bathroom: 'privativo',
     priceFrom: 220,
@@ -107,7 +103,6 @@ export const accommodations: Accommodation[] = [
     description:
       '[PREENCHER] Descrição real. Exemplo: quarto amplo para famílias ou grupos de amigos, com cama de casal, um beliche, mesa pequena e banheiro privativo.',
     capacity: 4,
-    units: 1,
     beds: ['1 cama de casal', '1 beliche (2 camas de solteiro)'],
     bathroom: 'privativo',
     priceFrom: 340,

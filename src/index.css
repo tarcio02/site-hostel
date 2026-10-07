@@ -66,6 +66,15 @@
   input[type='date']::-webkit-date-and-time-value {
     text-align: left;
   }
+  /*
+   * No celular a data por extenso ("7 de out. de 2026") quebra em duas linhas
+   * e só aquele campo crescia. Os dois já começam com a altura de duas linhas.
+   */
+  @media (max-width: 639.98px) {
+    input[type='date'] {
+      min-height: 4.375rem;
+    }
+  }
 
   h1,
   h2,

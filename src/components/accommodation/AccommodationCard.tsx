@@ -1,7 +1,6 @@
 import { Link } from 'react-router'
-import type { Accommodation, AvailabilityResult } from '../../types'
+import type { Accommodation } from '../../types'
 import { formatPrice, kindLabel } from '../../lib/format'
-import { AvailabilityNote } from '../booking/AvailabilityNote'
 import { Icon } from '../ui/Icon'
 import { LazyImage } from '../ui/LazyImage'
 import { Tag } from '../ui/Tag'
@@ -9,22 +8,16 @@ import { AmenityList } from './AmenityList'
 
 interface Props {
   accommodation: Accommodation
-  /** Resultado da busca; ausente quando não há datas selecionadas. */
-  result?: AvailabilityResult
-  loading?: boolean
   /** querystring da busca, para levar as datas à página de detalhes */
   query: string
 }
 
-export function AccommodationCard({ accommodation: acc, result, loading, query }: Props) {
-  const unavailable = result !== undefined && !result.available
+export function AccommodationCard({ accommodation: acc, query }: Props) {
   const href = `/acomodacoes/${acc.slug}${query ? `?${query}` : ''}`
 
   return (
     <article
-      className={`group relative flex flex-col overflow-hidden rounded-artesanal has-[a:focus-visible]:ring-4 has-[a:focus-visible]:ring-terracota-escuro border border-marrom/20 bg-creme-claro shadow-[0_10px_30px_-18px_rgba(74,52,38,0.6)] transition ${
-        unavailable ? 'opacity-55 saturate-50' : 'hover:-translate-y-1'
-      }`}
+      className="group relative flex flex-col overflow-hidden rounded-artesanal has-[a:focus-visible]:ring-4 has-[a:focus-visible]:ring-terracota-escuro border border-marrom/20 bg-creme-claro shadow-[0_10px_30px_-18px_rgba(74,52,38,0.6)] transition hover:-translate-y-1"
     >
       <div className="relative aspect-[4/3] overflow-hidden">
         <LazyImage
@@ -64,8 +57,6 @@ export function AccommodationCard({ accommodation: acc, result, loading, query }
         <AmenityList items={acc.amenities} compact />
 
         <div className="mt-auto space-y-3 border-t border-dashed border-marrom/35 pt-4">
-          {loading && <p className="text-sm">Consultando disponibilidade…</p>}
-          {!loading && result && <AvailabilityNote accommodation={acc} result={result} />}
           <div className="flex items-end justify-between gap-3">
             <p className="text-sm leading-tight">
               a partir de

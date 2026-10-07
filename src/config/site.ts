@@ -11,8 +11,8 @@ export const siteConfig = {
   siteUrl: 'https://site-hostel.vercel.app',
 
   /** Apenas números, com DDI e DDD: 55 + 75 + número */
-  whatsapp: '5575999999999', // [PREENCHER] número real
-  whatsappDisplay: '(75) 99999-9999', // [PREENCHER]
+  whatsapp: '5575982453894',
+  whatsappDisplay: '(75) 98245-3894',
   email: 'contato@[PREENCHER].com.br',
   instagram: {
     handle: '@[PREENCHER]',
@@ -20,17 +20,18 @@ export const siteConfig = {
   },
 
   address: {
-    street: '[PREENCHER] Rua / referência, nº',
+    street: 'Rua da Harmonia, 25',
     district: 'Vale do Capão (Caeté-Açu)',
     city: 'Palmeiras',
     state: 'BA',
-    zip: '[PREENCHER] CEP',
+    zip: '46930-000',
   },
 
-  /** Link "abrir no Google Maps" — [PREENCHER] com o link do perfil do hostel */
-  mapLink: 'https://maps.google.com/?q=Vale+do+Cap%C3%A3o,+Palmeiras+-+BA',
+  /** Link "abrir no Google Maps" — por enquanto busca o endereço; [PREENCHER] com o link do perfil do hostel */
+  mapLink: 'https://maps.google.com/?q=Rua+da+Harmonia,+25,+Vale+do+Cap%C3%A3o,+Palmeiras+-+BA,+46930-000',
   /** Mapa embutido — [PREENCHER] com o "Incorporar mapa" do Google Maps do hostel */
-  mapEmbedUrl: 'https://www.google.com/maps?q=Vale+do+Cap%C3%A3o,+Palmeiras+-+BA&output=embed',
+  mapEmbedUrl:
+    'https://www.google.com/maps?q=Rua+da+Harmonia,+25,+Vale+do+Cap%C3%A3o,+Palmeiras+-+BA,+46930-000&output=embed',
 
   checkInTime: '[PREENCHER] 14h',
   checkOutTime: '[PREENCHER] 11h',

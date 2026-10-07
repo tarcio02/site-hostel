@@ -31,7 +31,7 @@ export function SearchBar() {
       id="reservar"
       onSubmit={handleSubmit}
       noValidate
-      aria-label="Buscar disponibilidade"
+      aria-label="Escolher datas"
       className="rounded-artesanal border border-marrom/20 bg-creme-claro/95 p-4 shadow-[0_18px_40px_-20px_rgba(74,52,38,0.55)] backdrop-blur sm:p-5"
     >
       <div className="grid grid-cols-2 gap-3 md:grid-cols-[1fr_1fr_1.1fr_auto] md:items-end">
@@ -51,7 +51,7 @@ export function SearchBar() {
         />
         <Button type="submit" size="lg" className="col-span-2 md:col-span-1">
           <Icon name="calendario" size={20} />
-          Ver disponibilidade
+          Ver acomodações
         </Button>
       </div>
       {error && (
