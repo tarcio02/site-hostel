@@ -29,14 +29,14 @@ export function About() {
             height={1000}
             className="col-span-2 aspect-[16/10] w-full rounded-artesanal"
           />
-          {others.map((photo, i) => (
+          {others.map((photo) => (
             <LazyImage
               key={photo.src}
               src={photo.src}
               alt={photo.alt}
               width={600}
               height={600}
-              className={`aspect-square w-full rounded-artesanal ${i === 1 ? 'translate-y-4' : ''}`}
+              className="aspect-square w-full rounded-artesanal"
             />
           ))}
         </div>
