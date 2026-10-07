@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000"><defs>
+<filter id="w" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency=".012" numOctaves="3" seed="42"/><feDisplacementMap in="SourceGraphic" scale="38"/><feGaussianBlur stdDeviation="2"/></filter>
+<filter id="b"><feGaussianBlur stdDeviation="40"/></filter>
+</defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B5CDE0"/><stop offset="1" stop-color="#F6B9A2"/></linearGradient><rect width="1600" height="1000" fill="url(#s)"/><circle cx="1152" cy="260" r="90" fill="#F5A056" opacity=".85" filter="url(#w)"/><g filter="url(#w)" opacity=".9">
+<path d="M-40 620 L288 340 L544 500 L832 280 L1152 480 L1376 360 L1640 550 V1040 H-40Z" fill="#AD78A0"/>
+<path d="M-40 750 Q400 550 800 700 T1640 660 V1040 H-40Z" fill="#C0B97D"/>
+<path d="M-40 880 Q480 760 960 860 T1640 820 V1040 H-40Z" fill="#a9a266"/>
+</g></svg>
