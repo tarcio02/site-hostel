@@ -6,7 +6,6 @@ export type AccentColor = 'rosa' | 'pessego' | 'verde' | 'azul' | 'lilas'
 
 export type AmenityKey =
   | 'wifi'
-  | 'cafe'
   | 'ventilador'
   | 'armario'
   | 'tomada'

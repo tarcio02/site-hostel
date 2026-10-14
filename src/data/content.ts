@@ -9,10 +9,12 @@ import { siteConfig } from '../config/site'
  */
 
 export const about = {
-  title: 'Uma casa no meio do Vale',
+  title: 'E se a Iniã fosse uma pessoa?',
   paragraphs: [
-    '[PREENCHER] Conte a história do Iniã: quem recebe, como a casa surgiu e o que o nome significa.',
-    'Aqui a ideia é simples: um lugar tranquilo para dormir bem, cozinhar junto, trocar dicas de trilha e voltar para casa com o pé sujo de terra vermelha e a cabeça leve.',
+    'Iniã seria aquela pessoa que chega descalça a uma roda de conversa e faz com que toda a gente se sinta confortável para ser quem é.',
+    'Não tenta impressionar ninguém, nem convencer alguém a ficar. Acolhe quem chega com respeito e deixa partir quem percebe que aquele não é o seu lugar.',
+    'É criativa, espontânea e sensível. Gosta de música, arte, fogueiras, natureza e conversas profundas, mas também sabe respeitar o silêncio.',
+    'Não vive para seguir regras sociais; vive de acordo com os seus próprios valores. Valoriza a liberdade, mas entende que a liberdade só existe quando vem acompanhada de responsabilidade e respeito pelo outro.',
   ],
   photos: [
     { src: '/fotos/sobre-fachada.webp', alt: 'Entrada do hostel com jardim, varanda e vista para os morros (imagem ilustrativa)' },
@@ -28,15 +30,15 @@ export interface Facility {
 }
 
 export const facilities: Facility[] = [
-  { icon: 'cozinha', title: 'Cozinha compartilhada', text: 'Equipada para você preparar suas refeições e o lanche da trilha.' },
-  { icon: 'cafe', title: 'Café da manhã', text: '[PREENCHER] Horário e o que é servido.' },
+  { icon: 'cozinha', title: 'Duas cozinhas equipadas', text: 'Duas cozinhas completas para você preparar suas refeições e o lanche da trilha.' },
   { icon: 'rede', title: 'Redário', text: 'Redes à sombra para descansar depois do dia de cachoeira.' },
   { icon: 'folha', title: 'Jardim', text: 'Plantas, passarinhos e céu estrelado à noite.' },
   { icon: 'sofa', title: 'Área de convivência', text: 'Espaço para conversar, ler, tocar um violão e planejar o próximo passeio.' },
-  { icon: 'wifi', title: 'Wi-Fi', text: '[PREENCHER] Em quais áreas pega e se a velocidade dá para trabalhar.' },
-  { icon: 'lavanderia', title: 'Lavanderia', text: '[PREENCHER] Self-service ou serviço pago, e valores.' },
-  { icon: 'carro', title: 'Estacionamento', text: '[PREENCHER] Quantas vagas, se é coberto e se precisa reservar.' },
+  { icon: 'wifi', title: 'Wi-Fi', text: 'Duas redes que cobrem todo o espaço do hostel.' },
+  { icon: 'lavanderia', title: 'Lavanderia', text: 'Tanque e varal para lavar suas roupas. Se preferir, tem máquina de lavar, com uma taxa à parte.' },
+  { icon: 'carro', title: 'Estacionamento', text: 'Vagas para carro e moto.' },
   { icon: 'mochila', title: 'Guarda-volumes', text: 'Deixe a bagagem guardada enquanto faz trilhas de vários dias, como a travessia do Pati.' },
+  { icon: 'pata', title: 'Pets fofos', text: 'A casa tem a presença de pets, que vão adorar te receber.' },
 ]
 
 export interface Experience {
@@ -142,7 +144,7 @@ export const reviews: Review[] = [
   {
     name: '[PREENCHER] Hóspede 1',
     origin: 'São Paulo, SP',
-    text: 'Casa linda, café da manhã caprichado e as melhores dicas de trilha. Voltei com vontade de ficar mais uma semana.',
+    text: 'Casa linda, cozinha ótima e as melhores dicas de trilha. Voltei com vontade de ficar mais uma semana.',
     source: 'Avaliação de exemplo',
   },
   {

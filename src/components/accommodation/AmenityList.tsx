@@ -3,7 +3,6 @@ import { Icon, type IconName } from '../ui/Icon'
 
 export const amenityInfo: Record<AmenityKey, { icon: IconName; label: string }> = {
   wifi: { icon: 'wifi', label: 'Wi-Fi' },
-  cafe: { icon: 'cafe', label: 'Café da manhã' },
   ventilador: { icon: 'ventilador', label: 'Ventilador' },
   armario: { icon: 'armario', label: 'Armário com cadeado' },
   tomada: { icon: 'tomada', label: 'Tomadas individuais' },

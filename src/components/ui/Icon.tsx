@@ -3,7 +3,6 @@ import type { SVGProps } from 'react'
 /* Ícones de traço, desenhados em 24x24. Sem biblioteca externa para manter o site leve. */
 const paths = {
   wifi: <><path d="M2.5 9a14 14 0 0 1 19 0" /><path d="M5.5 12.5a9.5 9.5 0 0 1 13 0" /><path d="M8.7 15.8a5 5 0 0 1 6.6 0" /><circle cx="12" cy="19" r="1" fill="currentColor" /></>,
-  cafe: <><path d="M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5Z" /><path d="M16 10.5h1.5a2.5 2.5 0 0 1 0 5H16" /><path d="M8 3.5c-.6 1 .6 1.7 0 2.8M12 3.5c-.6 1 .6 1.7 0 2.8" /></>,
   ventilador: <><circle cx="12" cy="11" r="1.6" /><path d="M12 9.4C11 6 12.5 3.5 14.5 4.2s1 4.3-1.6 5.8" /><path d="M13.4 11.9c3.3 1.1 4.6 3.6 3 5s-4.2-1.3-4.1-4.3" /><path d="M10.5 11.4C7.4 13 4.7 12 5 10s3.7-2.2 5.6-.3" /><path d="M12 12.6V20M8.5 20h7" /></>,
   armario: <><rect x="5" y="10.5" width="14" height="10" rx="2" /><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3" /><path d="M12 14.5v2.5" /></>,
   tomada: <><rect x="4" y="4" width="16" height="16" rx="5" /><path d="M9.5 9.5v2M14.5 9.5v2" /><path d="M10 15.2h4" /></>,
