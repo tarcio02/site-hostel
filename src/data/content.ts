@@ -36,7 +36,7 @@ export const facilities: Facility[] = [
   { icon: 'sofa', title: 'Área de convivência', text: 'Espaço para conversar, ler, tocar um violão e planejar o próximo passeio.' },
   { icon: 'wifi', title: 'Wi-Fi', text: 'Duas redes que cobrem todo o espaço do hostel.' },
   { icon: 'lavanderia', title: 'Lavanderia', text: 'Tanque e varal para lavar suas roupas. Se preferir, tem máquina de lavar, com uma taxa à parte.' },
-  { icon: 'carro', title: 'Estacionamento', text: 'Vagas para carro e moto.' },
+  { icon: 'carro', title: 'Estacionamento', text: 'Venha tranquilo: contamos com estacionamento para quem chega de carro ou moto.' },
   { icon: 'mochila', title: 'Guarda-volumes', text: 'Deixe a bagagem guardada enquanto faz trilhas de vários dias, como a travessia do Pati.' },
   { icon: 'pata', title: 'Pets fofos', text: 'A casa tem a presença de pets, que vão adorar te receber.' },
 ]
@@ -86,16 +86,20 @@ export const experiences: Experience[] = [
   },
 ]
 
+/* Fora do site por enquanto. Para voltar, renderize de novo em sections/Valley.tsx. */
 export const partnerGuides = {
   title: 'Guias parceiros',
   text: '[PREENCHER] Nomes e contatos dos guias locais que vocês indicam. Trilhas longas, como o Pati e a Fumaça por baixo, pedem guia credenciado.',
 }
 
 export const villageTips = [
-  'Traga dinheiro em espécie: nem todo lugar na vila aceita cartão e as opções de saque são limitadas.',
+  'Traga dinheiro em espécie: não tem caixa eletrônico na vila (só em Palmeiras) e nem todo lugar aceita cartão.',
+  'Só o sinal da Claro pega na vila.',
   'Lanterna, protetor solar, repelente e uma garrafinha de água fazem toda a diferença nas trilhas.',
   'A vila é pequena e dá para fazer quase tudo a pé. À noite, a rua principal ganha vida com restaurantes e empórios.',
-  '[PREENCHER] Dicas pessoais: feira, restaurante preferido, pôr do sol favorito…',
+  'Toda quinta e todo domingo tem feira: uma riqueza gastronômica e artesanal do Vale.',
+  'Aos domingos tem roda de capoeira no Coreto.',
+  '[PREENCHER] Dicas pessoais: restaurante preferido, pôr do sol favorito…',
 ]
 
 export interface Route {
@@ -110,7 +114,8 @@ export const routes: Route[] = [
     from: 'De Salvador',
     icon: 'onibus',
     steps: [
-      'De ônibus: linhas de Salvador para Palmeiras ou Lençóis (cerca de 6 a 7 horas). [PREENCHER] Empresa e horários atualizados.',
+      'De ônibus: a Guanabara tem linhas de Salvador para Palmeiras e Lençóis (cerca de 6 a 7 horas).',
+      'Da rodoviária, siga de van até o Vale: R$ 25. Contato da van: (75) 9883-1860.',
       'De carro: cerca de 450 km pela BR-324 e BR-242 até Palmeiras, e de lá mais uns 20 km até o Vale do Capão.',
     ],
   },
@@ -119,7 +124,7 @@ export const routes: Route[] = [
     icon: 'carro',
     steps: [
       'São cerca de 20 km até o Capão. Há táxis e mototáxis na cidade.',
-      '[PREENCHER] Contato de transfer parceiro e valor médio.',
+      'De van: R$ 25 até o Vale. Contato: (75) 9883-1860.',
     ],
   },
   {
@@ -127,7 +132,7 @@ export const routes: Route[] = [
     icon: 'mapa',
     steps: [
       'Cerca de 70 km passando por Palmeiras (em torno de 1h30 de carro).',
-      '[PREENCHER] Transfer ou van compartilhada que vocês indicam.',
+      'A Guanabara liga Lençóis a Palmeiras, e a mesma van leva até o Vale: (75) 9883-1860.',
     ],
   },
 ]
@@ -171,27 +176,27 @@ export const policies: Policy[] = [
   {
     icon: 'relogio',
     title: 'Check-in e check-out',
-    text: `Check-in a partir das ${siteConfig.checkInTime}. Check-out até as ${siteConfig.checkOutTime}. Chegou cedo ou vai sair tarde? Pode deixar a mochila guardada.`,
+    text: `No quarto: check-in a partir das ${siteConfig.checkInTime} e check-out até as ${siteConfig.checkOutTime}. No hostel: dá para chegar a partir das ${siteConfig.hostelOpensAt} e ficar até as ${siteConfig.hostelClosesAt}, aproveitando as áreas comuns e o guarda-volumes.`,
   },
   {
     icon: 'pix',
     title: 'Pagamento',
-    text: 'A reserva é confirmada com um sinal via Pix de [PREENCHER]% do valor total. O restante pode ser pago na chegada em [PREENCHER] formas de pagamento.',
+    text: 'Para reservar, pedimos 50% do valor antes. Aceitamos Pix e cartões (com taxa de 3%).',
   },
   {
     icon: 'calendario',
     title: 'Cancelamento',
-    text: '[PREENCHER] Regra de cancelamento. Ex.: cancelamentos com até X dias de antecedência têm o sinal devolvido ou convertido em crédito.',
+    text: 'Cancelamento gratuito com até 24 horas de antecedência. Depois disso, cobramos 50% do valor da reserva.',
   },
   {
     icon: 'lua',
     title: 'Horário de silêncio',
-    text: 'Das [PREENCHER] às [PREENCHER], para que todo mundo descanse e acorde cedo para as trilhas.',
+    text: 'Das 22h às 10h, para que todo mundo descanse e acorde bem para as trilhas.',
   },
   {
     icon: 'pata',
     title: 'Pets',
-    text: '[PREENCHER] Aceitam animais? Em quais quartos e com quais condições?',
+    text: 'Seu pet é bem-vindo, com um valor adicional na diária. Lembre que a casa também tem os seus pets.',
   },
   {
     icon: 'pessoas',
@@ -209,21 +214,21 @@ export const faq: FaqItem[] = [
   {
     question: 'Tem caixa eletrônico na vila?',
     answer:
-      '[PREENCHER] Confirme a situação atual. As opções de saque no Vale do Capão são poucas e nem sempre funcionam, então recomendamos trazer dinheiro em espécie.',
+      'Não. O caixa eletrônico mais próximo fica em Palmeiras, então vale trazer dinheiro em espécie.',
   },
   {
     question: 'Vocês aceitam cartão?',
-    answer: 'O sinal da reserva é feito via Pix. Na chegada, aceitamos [PREENCHER] (ex.: Pix, dinheiro, débito e crédito).',
+    answer: 'Sim, com taxa de 3%. Também aceitamos Pix.',
   },
   {
     question: 'Pega sinal de celular?',
     answer:
-      '[PREENCHER] Quais operadoras funcionam na vila. Aqui no hostel temos Wi-Fi, mas nas trilhas o sinal costuma sumir. Avise alguém sobre seu roteiro.',
+      'Na vila, só a Claro pega. Aqui no hostel temos Wi-Fi, mas nas trilhas o sinal costuma sumir. Avise alguém sobre seu roteiro.',
   },
   {
     question: 'Preciso de guia para fazer as trilhas?',
     answer:
-      'Trilhas curtas e bem marcadas, como Riachinho e Águas Claras, dá para fazer por conta própria. Para trilhas longas ou pouco sinalizadas, como a Fumaça por baixo e a travessia do Pati, recomendamos guia credenciado. Indicamos guias parceiros.',
+      'Trilhas curtas e bem marcadas, como Riachinho e Águas Claras, dá para fazer por conta própria. Para trilhas longas ou pouco sinalizadas, como a Fumaça por baixo e a travessia do Pati, recomendamos guia credenciado.',
   },
   {
     question: 'Qual a melhor época para visitar?',

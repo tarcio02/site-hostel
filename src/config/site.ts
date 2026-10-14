@@ -13,10 +13,10 @@ export const siteConfig = {
   /** Apenas números, com DDI e DDD: 55 + 75 + número */
   whatsapp: '5575982453894',
   whatsappDisplay: '(75) 98245-3894',
-  email: 'contato@[PREENCHER].com.br',
+  email: 'iniacasahostel@gmail.com',
   instagram: {
-    handle: '@[PREENCHER]',
-    url: 'https://instagram.com/[PREENCHER]',
+    handle: '@inia.casa.hostel',
+    url: 'https://instagram.com/inia.casa.hostel',
   },
 
   address: {
@@ -24,17 +24,21 @@ export const siteConfig = {
     district: 'Vale do Capão (Caeté-Açu)',
     city: 'Palmeiras',
     state: 'BA',
-    zip: '46930-000',
+    zip: '46940-000',
   },
 
   /** Link "abrir no Google Maps" — por enquanto busca o endereço; [PREENCHER] com o link do perfil do hostel */
-  mapLink: 'https://maps.google.com/?q=Rua+da+Harmonia,+25,+Vale+do+Cap%C3%A3o,+Palmeiras+-+BA,+46930-000',
+  mapLink: 'https://maps.google.com/?q=Rua+da+Harmonia,+25,+Vale+do+Cap%C3%A3o,+Palmeiras+-+BA,+46940-000',
   /** Mapa embutido — [PREENCHER] com o "Incorporar mapa" do Google Maps do hostel */
   mapEmbedUrl:
-    'https://www.google.com/maps?q=Rua+da+Harmonia,+25,+Vale+do+Cap%C3%A3o,+Palmeiras+-+BA,+46930-000&output=embed',
+    'https://www.google.com/maps?q=Rua+da+Harmonia,+25,+Vale+do+Cap%C3%A3o,+Palmeiras+-+BA,+46940-000&output=embed',
 
-  checkInTime: '[PREENCHER] 14h',
-  checkOutTime: '[PREENCHER] 11h',
+  /** Horários do quarto */
+  checkInTime: '14h',
+  checkOutTime: '12h',
+  /** Horários em que o hóspede pode ficar no hostel (áreas comuns, guarda-volumes) */
+  hostelOpensAt: '7h',
+  hostelClosesAt: '17h',
 
   legal: {
     cnpj: '[PREENCHER]',

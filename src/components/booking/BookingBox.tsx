@@ -58,7 +58,7 @@ export function BookingBox({ accommodation }: { accommodation: Accommodation }) 
         <Icon name="whatsapp" /> Reservar pelo WhatsApp
       </ButtonAnchor>
       <p className="text-center text-xs text-marrom-texto/90">
-        Confirmamos a disponibilidade pelo WhatsApp. A reserva é garantida com sinal via Pix.
+        Confirmamos a disponibilidade pelo WhatsApp. Para reservar, pedimos 50% do valor antes.
       </p>
     </div>
   )

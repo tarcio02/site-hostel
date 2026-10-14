@@ -59,8 +59,9 @@ const hostelLd = () => {
     },
     telephone: `+${siteConfig.whatsapp}`,
     // [PREENCHER] incluir geo (latitude/longitude) quando houver os dados reais
-    checkinTime: filled(siteConfig.checkInTime),
-    checkoutTime: filled(siteConfig.checkOutTime),
+    // "14h" → "14:00", o formato que o schema.org espera
+    checkinTime: siteConfig.checkInTime.replace('h', ':00'),
+    checkoutTime: siteConfig.checkOutTime.replace('h', ':00'),
     sameAs: [filled(siteConfig.instagram.url)].filter(Boolean),
     amenityFeature: facilities.map((f) => ({ '@type': 'LocationFeatureSpecification', name: f.title, value: true })),
   }
