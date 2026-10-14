@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { fullAddress, siteConfig } from '../config/site'
-import { routes } from '../data/content'
+import { routes, van } from '../data/content'
+import { whatsappUrl } from '../lib/whatsapp'
 import { Button, ButtonAnchor } from '../components/ui/Button'
 import { Icon } from '../components/ui/Icon'
 import { Section } from '../components/ui/Section'
@@ -53,9 +54,27 @@ export function HowToGet() {
               </h3>
               <ul className="space-y-2">
                 {r.steps.map((s) => (
-                  <li key={s} className="flex gap-2 leading-relaxed">
+                  <li key={s.text} className="flex gap-2 leading-relaxed">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-terracota" aria-hidden="true" />
-                    {s}
+                    <span>
+                      {s.text}
+                      {s.vanContact && (
+                        <>
+                          {' '}
+                          Contato da van:{' '}
+                          <a
+                            href={whatsappUrl(van.message, van.whatsapp)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`${van.phoneDisplay}, contato da van no WhatsApp`}
+                            className="inline-flex items-center gap-1 font-bold whitespace-nowrap text-terracota-escuro underline underline-offset-4"
+                          >
+                            <Icon name="whatsapp" size={18} />
+                            {van.phoneDisplay}
+                          </a>
+                        </>
+                      )}
+                    </span>
                   </li>
                 ))}
               </ul>

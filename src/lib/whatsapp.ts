@@ -2,8 +2,9 @@ import { siteConfig } from '../config/site'
 import type { ISODate } from '../types'
 import { countNights, formatDayMonth, plural } from './dates'
 
-export function whatsappUrl(message: string): string {
-  return `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(message)}`
+/** Link wa.me com mensagem pronta. Por padrão, para o WhatsApp do hostel. */
+export function whatsappUrl(message: string, number: string = siteConfig.whatsapp): string {
+  return `https://wa.me/${number}?text=${encodeURIComponent(message)}`
 }
 
 export const GENERIC_MESSAGE = `Olá! Vim pelo site do ${siteConfig.shortName} e gostaria de mais informações.`

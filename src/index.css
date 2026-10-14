@@ -76,6 +76,11 @@
     }
   }
 
+  /* com um modal aberto, a página atrás não rola */
+  html:has(dialog[open]) {
+    overflow: hidden;
+  }
+
   h1,
   h2,
   h3 {

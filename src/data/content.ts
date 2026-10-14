@@ -23,6 +23,25 @@ export const about = {
   ],
 }
 
+/* Texto do modal "O que significa a palavra Iniã?", aberto a partir da seção Sobre. */
+export const nameMeaning = {
+  title: 'O que significa a palavra Iniã?',
+  paragraphs: [
+    'Iniã é um canto, um rezo indígena presente em contextos cerimoniais dos povos Noke Koi e Yawanawá que vivem na Amazônia.',
+    'Existe uma história antiga que nos conta que, antes de nos comunicarmos pelas palavras, falávamos através das frequências e vibrações. Éramos capazes de nos comunicar com toda a floresta, com as árvores, as plantas, os animais, o fogo e as águas.',
+    'A palavra veio como uma forma de materializar aquilo que antes era sentido, vibrado e compartilhado de outras maneiras.',
+    'De origem na família linguística Pano, Iniã carrega, para mim, muito mais do que a imagem de uma flor. Representa a beleza que floresce sem pressa, a calma dos ciclos da natureza, a leveza do feminino e a potência de existir em toda a nossa essência.',
+    'É sobre respeitar o tempo de cada coisa. Sobre compreender que a beleza não precisa de pressa, que a vida acontece em ciclos e que tudo, à sua maneira, encontra o momento de florescer.',
+    'Tudo no seu tempo floresce.',
+    'E foi com esse sentir que nasceu o Iniã Casa Hostel.',
+    'Um espaço de encontro, natureza, arte e conexão, no coração do Vale do Capão, na Chapada Diamantina.',
+    'Vem viver essa experiência com a gente. Vem desacelerar, respirar fundo e sentir a beleza de estar presente.',
+  ],
+  /** frase em destaque, no meio do texto */
+  highlight: 'Tudo no seu tempo floresce.',
+  signature: 'Iniã Casa Hostel — aqui, a vida floresce no seu tempo.',
+}
+
 export interface Facility {
   icon: IconName
   title: string
@@ -102,37 +121,51 @@ export const villageTips = [
   '[PREENCHER] Dicas pessoais: restaurante preferido, pôr do sol favorito…',
 ]
 
+/** Van que faz Palmeiras → Vale do Capão. O número abre o WhatsApp. */
+export const van = {
+  phoneDisplay: '(75) 9883-1860',
+  /** Apenas números, com DDI e DDD */
+  whatsapp: '557598831860',
+  message: `Olá! Peguei seu contato no site do ${siteConfig.name}. Gostaria de saber sobre a van de Palmeiras até o Vale do Capão.`,
+}
+
+export interface RouteStep {
+  text: string
+  /** mostra o contato da van (link para o WhatsApp) depois do texto */
+  vanContact?: boolean
+}
+
 export interface Route {
   from: string
   icon: IconName
-  steps: string[]
+  steps: RouteStep[]
 }
 
-/* Revise tempos e distâncias — são aproximados. */
+/* Revise tempos e distâncias — são aproximados. A van fica sempre como último passo. */
 export const routes: Route[] = [
   {
     from: 'De Salvador',
     icon: 'onibus',
     steps: [
-      'De ônibus: a Guanabara tem linhas de Salvador para Palmeiras e Lençóis (cerca de 6 a 7 horas).',
-      'Da rodoviária, siga de van até o Vale: R$ 25. Contato da van: (75) 9883-1860.',
-      'De carro: cerca de 450 km pela BR-324 e BR-242 até Palmeiras, e de lá mais uns 20 km até o Vale do Capão.',
+      { text: 'De ônibus: a Guanabara tem linhas de Salvador para Palmeiras e Lençóis (cerca de 6 a 7 horas).' },
+      { text: 'De carro: cerca de 450 km pela BR-324 e BR-242 até Palmeiras, e de lá mais uns 20 km até o Vale do Capão.' },
+      { text: 'De Palmeiras, siga de van até o Vale: R$ 25.', vanContact: true },
     ],
   },
   {
     from: 'De Palmeiras',
     icon: 'carro',
     steps: [
-      'São cerca de 20 km até o Capão. Há táxis e mototáxis na cidade.',
-      'De van: R$ 25 até o Vale. Contato: (75) 9883-1860.',
+      { text: 'São cerca de 20 km até o Capão. Há táxis e mototáxis na cidade.' },
+      { text: 'De van: R$ 25 até o Vale.', vanContact: true },
     ],
   },
   {
     from: 'De Lençóis',
     icon: 'mapa',
     steps: [
-      'Cerca de 70 km passando por Palmeiras (em torno de 1h30 de carro).',
-      'A Guanabara liga Lençóis a Palmeiras, e a mesma van leva até o Vale: (75) 9883-1860.',
+      { text: 'Cerca de 70 km passando por Palmeiras (em torno de 1h30 de carro). De ônibus, a Guanabara liga Lençóis a Palmeiras.' },
+      { text: 'De Palmeiras, siga de van até o Vale: R$ 25.', vanContact: true },
     ],
   },
 ]
@@ -201,7 +234,7 @@ export const policies: Policy[] = [
   {
     icon: 'pessoas',
     title: 'Idade mínima nos dormitórios',
-    text: 'Os dormitórios são para maiores de [PREENCHER] anos. Famílias com crianças ficam melhor no Quarto Família.',
+    text: 'Menores de 18 anos são aceitos somente quando acompanhados pelos pais ou responsáveis legais.',
   },
 ]
 

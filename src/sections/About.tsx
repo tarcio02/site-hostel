@@ -1,9 +1,13 @@
-import { about } from '../data/content'
+import { useState } from 'react'
+import { about, nameMeaning } from '../data/content'
 import { LazyImage } from '../components/ui/LazyImage'
 import { MandalaDivider } from '../components/ui/MandalaDivider'
+import { Modal } from '../components/ui/Modal'
 
 export function About() {
   const [main, ...others] = about.photos
+  const [meaningOpen, setMeaningOpen] = useState(false)
+
   return (
     <section id="sobre" aria-labelledby="sobre-title" className="relative isolate overflow-hidden px-4 py-16 sm:px-6 sm:py-24">
       <div className="aquarela -top-10 right-0 h-64 w-64 bg-pessego" aria-hidden="true" />
@@ -19,6 +23,14 @@ export function About() {
               <p key={p}>{p}</p>
             ))}
           </div>
+          <button
+            type="button"
+            onClick={() => setMeaningOpen(true)}
+            aria-haspopup="dialog"
+            className="mt-5 text-sm font-semibold text-terracota-escuro underline decoration-dotted underline-offset-4 hover:decoration-solid"
+          >
+            {nameMeaning.title}
+          </button>
         </div>
 
         <div className="grid grid-cols-2 gap-3 sm:gap-4">
@@ -41,6 +53,22 @@ export function About() {
           ))}
         </div>
       </div>
+
+      <Modal open={meaningOpen} onClose={() => setMeaningOpen(false)} title={nameMeaning.title}>
+        <div className="space-y-4 leading-relaxed">
+          {nameMeaning.paragraphs.map((p) =>
+            p === nameMeaning.highlight ? (
+              <p key={p} className="py-2 text-center font-display text-2xl text-terracota italic">
+                {p}
+              </p>
+            ) : (
+              <p key={p}>{p}</p>
+            ),
+          )}
+        </div>
+        <MandalaDivider className="my-6" />
+        <p className="text-center font-display text-lg font-semibold text-terracota-escuro">{nameMeaning.signature}</p>
+      </Modal>
     </section>
   )
 }
