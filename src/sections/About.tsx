@@ -37,8 +37,8 @@ export function About() {
           <LazyImage
             src={main.src}
             alt={main.alt}
-            width={800}
-            height={1000}
+            width={960}
+            height={720}
             className="col-span-2 aspect-[16/10] w-full rounded-artesanal"
           />
           {others.map((photo) => (

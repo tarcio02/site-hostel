@@ -17,9 +17,9 @@ export const about = {
     'Não vive para seguir regras sociais; vive de acordo com os seus próprios valores. Valoriza a liberdade, mas entende que a liberdade só existe quando vem acompanhada de responsabilidade e respeito pelo outro.',
   ],
   photos: [
-    { src: '/fotos/sobre-fachada.webp', alt: 'Entrada do hostel com jardim, varanda e vista para os morros (imagem ilustrativa)' },
-    { src: '/fotos/sobre-dormitorio.webp', alt: 'Dormitório com beliches de madeira (imagem ilustrativa)' },
-    { src: '/fotos/sobre-varanda.webp', alt: 'Rede na varanda com o pôr do sol no Vale (imagem ilustrativa)' },
+    { src: '/fotos/sobre-casa.webp', alt: 'Casa do hostel com telhado de barro entre bananeiras e árvores, ao lado de uma construção vermelha com porta de madeira' },
+    { src: '/fotos/sobre-fogueira.webp', alt: 'Roda de violão em volta da fogueira à noite, com bandeirinhas coloridas e luzes entre as árvores' },
+    { src: '/fotos/sobre-quarto.webp', alt: 'Quarto com colcha de mandalas, janela grande para a mata e vitral em forma de folha' },
   ],
 }
 
@@ -66,38 +66,38 @@ export interface Experience {
   duration: string
   text: string
   accent: AccentColor
-  /** Imagem ilustrativa, não é do lugar exato. [PREENCHER] trocar por foto real. */
+  /** Foto quadrada (640x640, WebP) em public/fotos/ */
   photo: Photo
 }
 
 export const experiences: Experience[] = [
   {
     title: 'Cachoeira da Fumaça',
-    photo: { src: '/fotos/cachoeira-2.webp', alt: 'Queda d’água alta caindo de um paredão de pedra (imagem ilustrativa)' },
+    photo: { src: '/fotos/cachoeira-da-fumaca.webp', alt: 'Vista aérea da Cachoeira da Fumaça caindo de um paredão de pedra até a mata' },
     level: 'Moderada',
     duration: 'Dia inteiro',
     accent: 'azul',
     text: 'Uma das quedas d’água mais altas do Brasil. A trilha “por cima” sai do próprio Vale e termina num mirante de tirar o fôlego.',
   },
   {
-    title: 'Riachinho',
-    photo: { src: '/fotos/cachoeira-3.webp', alt: 'Cachoeira em degraus de pedra com poço para banho (imagem ilustrativa)' },
+    title: 'Ponte Velha',
+    photo: { src: '/fotos/ponte-velha.webp', alt: 'Ponte Velha: queda d’água entre pedras claras e um poço tranquilo para banho' },
     level: 'Leve',
     duration: 'Meio período',
     accent: 'verde',
     text: 'Cachoeira e poços pertinho da vila, perfeitos para um primeiro dia ou para uma tarde sem pressa.',
   },
   {
-    title: 'Águas Claras',
-    photo: { src: '/fotos/cachoeira-4.webp', alt: 'Poço de água verde-clara ao pé de uma cachoeira (imagem ilustrativa)' },
-    level: 'Leve a moderada',
+    title: 'Rio Preto',
+    photo: { src: '/fotos/rio-preto.webp', alt: 'Rio Preto: poço de água escura entre pedras, com a mata ao fundo' },
+    level: 'Leve',
     duration: 'Meio período',
     accent: 'pessego',
-    text: 'Água cristalina, poço para banho e uma caminhada agradável entre a mata e as pedras.',
+    text: 'Água gelada e revigorante, poço para banho e uma caminhada agradável entre a mata e as pedras.',
   },
   {
     title: 'Vale do Pati',
-    photo: { src: '/fotos/cachoeira-1.webp', alt: 'Cachoeira entre a mata com morros ao fundo (imagem ilustrativa)' },
+    photo: { src: '/fotos/vale-do-pati.webp', alt: 'Mirante do Cachoeirão, no Vale do Pati: cânion de paredões cobertos de mata' },
     level: 'Travessia',
     duration: '3 a 5 dias',
     accent: 'lilas',
@@ -261,7 +261,7 @@ export const faq: FaqItem[] = [
   {
     question: 'Preciso de guia para fazer as trilhas?',
     answer:
-      'Trilhas curtas e bem marcadas, como Riachinho e Águas Claras, dá para fazer por conta própria. Para trilhas longas ou pouco sinalizadas, como a Fumaça por baixo e a travessia do Pati, recomendamos guia credenciado.',
+      'Trilhas curtas e bem marcadas, como Ponte Velha e Rio Preto, dá para fazer por conta própria. Para trilhas longas ou pouco sinalizadas, como a Fumaça por baixo e a travessia do Pati, recomendamos guia credenciado.',
   },
   {
     question: 'Qual a melhor época para visitar?',
