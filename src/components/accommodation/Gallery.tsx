@@ -20,7 +20,7 @@ export function Gallery({ photos }: { photos: Photo[] }) {
           className="aspect-[3/2] w-full"
         />
       </div>
-      <ul className="grid grid-cols-3 gap-3" aria-label="Fotos">
+      <ul className={`grid ${photos.length > 3 ? 'grid-cols-5 gap-2' : 'grid-cols-3 gap-3'}`} aria-label="Fotos">
         {photos.map((photo, i) => (
           <li key={photo.src}>
             <button
@@ -32,7 +32,7 @@ export function Gallery({ photos }: { photos: Photo[] }) {
                 i === active ? 'border-terracota' : 'border-transparent opacity-75 hover:opacity-100'
               }`}
             >
-              <LazyImage src={photo.src} alt="" width={400} height={300} className="aspect-[4/3] w-full" />
+              <LazyImage src={photo.thumb ?? photo.src} alt="" width={400} height={300} className="aspect-[4/3] w-full" />
             </button>
           </li>
         ))}

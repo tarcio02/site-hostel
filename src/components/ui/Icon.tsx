@@ -3,13 +3,8 @@ import type { SVGProps } from 'react'
 /* Ícones de traço, desenhados em 24x24. Sem biblioteca externa para manter o site leve. */
 const paths = {
   wifi: <><path d="M2.5 9a14 14 0 0 1 19 0" /><path d="M5.5 12.5a9.5 9.5 0 0 1 13 0" /><path d="M8.7 15.8a5 5 0 0 1 6.6 0" /><circle cx="12" cy="19" r="1" fill="currentColor" /></>,
-  ventilador: <><circle cx="12" cy="11" r="1.6" /><path d="M12 9.4C11 6 12.5 3.5 14.5 4.2s1 4.3-1.6 5.8" /><path d="M13.4 11.9c3.3 1.1 4.6 3.6 3 5s-4.2-1.3-4.1-4.3" /><path d="M10.5 11.4C7.4 13 4.7 12 5 10s3.7-2.2 5.6-.3" /><path d="M12 12.6V20M8.5 20h7" /></>,
-  armario: <><rect x="5" y="10.5" width="14" height="10" rx="2" /><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3" /><path d="M12 14.5v2.5" /></>,
-  tomada: <><rect x="4" y="4" width="16" height="16" rx="5" /><path d="M9.5 9.5v2M14.5 9.5v2" /><path d="M10 15.2h4" /></>,
-  'roupa-de-cama': <><path d="M3 18v-6.5A2.5 2.5 0 0 1 5.5 9h13a2.5 2.5 0 0 1 2.5 2.5V18" /><path d="M3 15h18M3 18v2M21 18v2" /><rect x="5.5" y="5" width="6" height="4" rx="1.5" /></>,
-  toalha: <><path d="M6 4h12v15a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1Z" /><path d="M6 8h12M9 14h6M9 17h6" /></>,
   banheiro: <><path d="M4 12h16v2a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5Z" /><path d="M6 12V6a2 2 0 0 1 3.6-1.2" /><path d="M8 19l-1 2M16 19l1 2" /></>,
-  varanda: <><path d="M3 9h18M5 9V20M19 9V20M3 20h18" /><path d="M9 9v11M12 9v11M15 9v11" /><path d="M5 9l7-5 7 5" /></>,
+  fogueira: <><path d="M12 3c.5 2.5 3.5 4 3.5 7.5a3.5 3.5 0 0 1-7 0c0-1.5.8-2.5 1.5-3.2.2 1.3.8 2 1.5 2.2C11 7.5 11 5 12 3Z" /><path d="m4 21 16-4M4 17l16 4" /></>,
   cozinha: <><path d="M4 11h16v2a7 7 0 0 1-7 7h-2a7 7 0 0 1-7-7Z" /><path d="M2.5 11h19" /><path d="M9 4.5c-.6 1 .6 2 0 3M12 3.5c-.6 1 .6 2.4 0 3.5M15 4.5c-.6 1 .6 2 0 3" /></>,
   rede: <><path d="M3 5v14M21 5v14" /><path d="M3 8c3 7 15 7 18 0" /><path d="M3 8c4 4 14 4 18 0" /></>,
   folha: <><path d="M5 19C4 11 9 5 19 5c0 10-6 15-14 14Z" /><path d="M5 19 13 11" /></>,

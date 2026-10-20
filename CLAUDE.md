@@ -46,7 +46,7 @@ Fontes: `font-display` = Fraunces (títulos) e `font-sans` = Nunito (texto), car
 
 ```
 src/
-  config/site.ts          nome, WhatsApp, e-mail, Instagram, endereço, horários, CNPJ/Cadastur, links do mapa
+  config/site.ts          nome, WhatsApp, e-mail, Instagram, endereço, horários, links do mapa
   types/index.ts          Accommodation, Photo, ISODate…
   data/accommodations.ts  as 4 acomodações (dados de exemplo)
   data/content.ts         textos das seções (estrutura, vale, rotas, avaliações, políticas, FAQ)

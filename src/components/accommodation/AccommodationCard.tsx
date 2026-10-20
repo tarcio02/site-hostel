@@ -1,6 +1,7 @@
 import { Link } from 'react-router'
 import type { Accommodation } from '../../types'
 import { formatPrice, kindLabel } from '../../lib/format'
+import { plural } from '../../lib/dates'
 import { Icon } from '../ui/Icon'
 import { LazyImage } from '../ui/LazyImage'
 import { Tag } from '../ui/Tag'
@@ -46,7 +47,7 @@ export function AccommodationCard({ accommodation: acc, query }: Props) {
         <ul className="flex flex-wrap gap-x-4 gap-y-1 text-sm font-semibold">
           <li className="flex items-center gap-1.5">
             <Icon name={acc.kind === 'dormitorio' ? 'cama' : 'pessoas'} size={18} className="text-terracota-escuro" />
-            {acc.kind === 'dormitorio' ? `${acc.capacity} camas` : `Até ${acc.capacity} pessoas`}
+            {acc.kind === 'dormitorio' ? `${acc.capacity} camas` : `Até ${plural(acc.capacity, 'pessoa', 'pessoas')}`}
           </li>
           <li className="flex items-center gap-1.5">
             <Icon name="banheiro" size={18} className="text-terracota-escuro" />
@@ -61,7 +62,7 @@ export function AccommodationCard({ accommodation: acc, query }: Props) {
             <p className="text-sm leading-tight">
               a partir de
               <span className="block font-display text-2xl font-bold text-terracota">{formatPrice(acc.priceFrom)}</span>
-              por {acc.priceUnit} / noite
+              {acc.kind === 'tenda' ? 'por tenda' : `por ${acc.priceUnit}`} / noite
             </p>
             <span className="flex items-center gap-1 text-sm font-bold text-terracota-escuro" aria-hidden="true">
               Ver detalhes <Icon name="seta-direita" size={18} />

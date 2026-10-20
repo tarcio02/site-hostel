@@ -16,20 +16,23 @@ export const GENERIC_MESSAGE = `Olá! Vim pelo site do ${siteConfig.shortName} e
  */
 export function bookingMessage(params: {
   accommodationName: string
+  /** nome feminino: "na *Tenda*. Ela está…" */
+  feminine?: boolean
   checkIn: ISODate | null
   checkOut: ISODate | null
   guests: number
 }): string {
-  const { accommodationName, checkIn, checkOut, guests } = params
+  const { accommodationName, feminine, checkIn, checkOut, guests } = params
+  const [no, ele] = feminine ? ['na', 'Ela'] : ['no', 'Ele']
   const people = plural(guests, 'pessoa', 'pessoas')
-  const greeting = `Olá! Tudo bem? Vim pelo site do ${siteConfig.shortName} e tenho interesse no *${accommodationName}*.`
+  const greeting = `Olá! Tudo bem? Vim pelo site do ${siteConfig.shortName} e tenho interesse ${no} *${accommodationName}*.`
 
   if (!checkIn || !checkOut) {
-    return `${greeting} Ele está disponível para *${people}*? Ainda estou definindo as datas.`
+    return `${greeting} ${ele} está disponível para *${people}*? Ainda estou definindo as datas.`
   }
   const nights = countNights(checkIn, checkOut)
   return (
-    `${greeting} Ele está disponível de *${formatDayMonth(checkIn)}* a *${formatDayMonth(checkOut)}* ` +
+    `${greeting} ${ele} está disponível de *${formatDayMonth(checkIn)}* a *${formatDayMonth(checkOut)}* ` +
     `(${plural(nights, 'noite', 'noites')}) para *${people}*? Desde já, agradeço!`
   )
 }

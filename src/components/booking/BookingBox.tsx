@@ -24,6 +24,7 @@ export function BookingBox({ accommodation }: { accommodation: Accommodation }) 
   const rangeError = checkIn && checkOut ? validateRange(checkIn, checkOut) : null
   const message = bookingMessage({
     accommodationName: accommodation.name,
+    feminine: accommodation.feminine,
     checkIn: hasValidRange ? checkIn : null,
     checkOut: hasValidRange ? checkOut : null,
     guests,

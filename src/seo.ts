@@ -72,7 +72,7 @@ function metaFor(path: string): Meta {
     return {
       title: `${siteConfig.name} · Vale do Capão, Chapada Diamantina`,
       description:
-        'Hostel no Vale do Capão (Caeté-Açu), Chapada Diamantina - BA. Dormitórios e quartos privativos perto das trilhas e cachoeiras. Reserve pelo WhatsApp.',
+        'Hostel no Vale do Capão (Caeté-Açu), Chapada Diamantina - BA. Quarto privativo, tendas e dormitório perto das trilhas e cachoeiras. Reserve pelo WhatsApp.',
       image: '/og/home.jpg',
       structured: [hostelLd()],
     }

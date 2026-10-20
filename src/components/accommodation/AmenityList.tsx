@@ -3,14 +3,9 @@ import { Icon, type IconName } from '../ui/Icon'
 
 export const amenityInfo: Record<AmenityKey, { icon: IconName; label: string }> = {
   wifi: { icon: 'wifi', label: 'Wi-Fi' },
-  ventilador: { icon: 'ventilador', label: 'Ventilador' },
-  armario: { icon: 'armario', label: 'Armário com cadeado' },
-  tomada: { icon: 'tomada', label: 'Tomadas individuais' },
-  'roupa-de-cama': { icon: 'roupa-de-cama', label: 'Roupa de cama' },
-  toalha: { icon: 'toalha', label: 'Toalha' },
-  'banheiro-privativo': { icon: 'banheiro', label: 'Banheiro privativo' },
-  'banheiro-compartilhado': { icon: 'banheiro', label: 'Banheiro compartilhado' },
-  varanda: { icon: 'varanda', label: 'Varanda' },
+  redario: { icon: 'rede', label: 'Redário' },
+  fogueira: { icon: 'fogueira', label: 'Fogueira' },
+  atividades: { icon: 'pessoas', label: 'Atividades em grupo' },
 }
 
 /** compact: só ícones (com nome acessível), usado nos cards. */

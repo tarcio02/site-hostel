@@ -39,11 +39,6 @@ export const siteConfig = {
   /** Horários em que o hóspede pode ficar no hostel (áreas comuns, guarda-volumes) */
   hostelOpensAt: '7h',
   hostelClosesAt: '17h',
-
-  legal: {
-    cnpj: '[PREENCHER]',
-    cadastur: '[PREENCHER]',
-  },
 } as const
 
 export const navLinks = [

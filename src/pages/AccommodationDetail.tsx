@@ -95,7 +95,7 @@ export function AccommodationDetail() {
                 </h2>
                 <p>
                   A partir de <strong className="font-display text-2xl text-terracota">{formatPrice(acc.priceFrom)}</strong>{' '}
-                  {acc.priceUnit === 'pessoa' ? 'por pessoa' : 'pelo quarto'}, por noite.
+                  {acc.kind === 'tenda' ? 'pela tenda' : acc.priceUnit === 'pessoa' ? 'por pessoa' : 'pelo quarto'}, por noite.
                 </p>
                 <p className="mt-2 flex items-start gap-2 text-sm">
                   <Icon name="calendario" size={18} className="mt-0.5 shrink-0 text-terracota-escuro" />

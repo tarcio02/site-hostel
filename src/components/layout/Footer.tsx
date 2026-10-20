@@ -68,9 +68,6 @@ export function Footer() {
         <p>
           © {year} {siteConfig.name}
         </p>
-        <p>
-          CNPJ {siteConfig.legal.cnpj} · Cadastur {siteConfig.legal.cadastur}
-        </p>
       </div>
     </footer>
   )

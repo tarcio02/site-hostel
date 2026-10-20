@@ -5,14 +5,14 @@ export function Hero() {
   return (
     <section aria-labelledby="hero-title" className="relative">
       <div className="relative flex min-h-[78svh] items-end overflow-hidden px-4 pt-16 pb-36 sm:px-6 md:min-h-[82vh] md:items-center md:pb-40">
-        {/* Imagem ilustrativa. [PREENCHER] trocar por foto real (WebP, < 250 KB) mantendo as duas versões */}
+        {/* Morro ao pôr do sol. Original em fotos-originais/hero-morro.png; a versão de celular é um recorte vertical centrado no morro */}
         <picture>
-          <source media="(min-width: 768px)" srcSet="/fotos/hero-desktop.webp" width={1672} height={941} />
+          <source media="(min-width: 768px)" srcSet="/fotos/hero-desktop.webp" width={1774} height={887} />
           <img
             src="/fotos/hero-mobile.webp"
             alt=""
-            width={941}
-            height={1672}
+            width={665}
+            height={887}
             fetchPriority="high"
             decoding="async"
             className="absolute inset-0 h-full w-full object-cover"

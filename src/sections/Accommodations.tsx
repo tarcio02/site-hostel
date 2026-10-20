@@ -11,7 +11,7 @@ export function Accommodations() {
   return (
     <Section id="quartos" tone="claro" labelledBy="quartos-title">
       <SectionTitle id="quartos-title" eyebrow="Acomodações" title="Onde você vai dormir">
-        <p>Dormitórios para quem viaja leve e quartos privativos para quem quer um canto só seu.</p>
+        <p>Quarto privativo para quem quer um canto só seu, tendas para dormir pertinho da natureza e dormitório para quem viaja leve.</p>
       </SectionTitle>
 
       <div aria-live="polite" className="mb-8 text-center">
@@ -38,7 +38,7 @@ export function Accommodations() {
         )}
       </div>
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {accommodations.map((acc) => (
           <AccommodationCard key={acc.id} accommodation={acc} query={queryString} />
         ))}

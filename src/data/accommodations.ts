@@ -1,117 +1,91 @@
-import type { Accommodation } from '../types'
+import type { Accommodation, AmenityKey } from '../types'
 
 /*
- * DADOS DE EXEMPLO — nomes, preços, camas e fotos são fictícios.
- * [PREENCHER] com as acomodações reais.
+ * As 3 acomodações do hostel, conforme o anúncio no Booking:
+ * nome, camas, nº de hóspedes, Wi-Fi e preço "a partir de" (valores de referência do Booking).
+ * Fotos reais em public/fotos/. Descrições e o que mais estiver marcado com [PREENCHER] ainda são provisórios.
  */
 
-const ph = (file: string) => `/placeholders/${file}`
+/** Foto real em public/fotos/: <nome>.webp (1200px) e <nome>-mini.webp (miniatura) */
+const foto = (name: string, alt: string) => ({ src: `/fotos/${name}.webp`, thumb: `/fotos/${name}-mini.webp`, alt })
+
+/* Iguais para todas as acomodações */
+const incluso = ['Acesso à lavanderia', 'Cozinha comunitária', 'Estacionamento']
+const comodidades: AmenityKey[] = ['wifi', 'redario', 'fogueira', 'atividades']
 
 export const accommodations: Accommodation[] = [
   {
-    id: 'dorm-misto',
-    slug: 'dormitorio-misto',
-    name: 'Dormitório Misto',
-    kind: 'dormitorio',
-    dormGender: 'misto',
-    accent: 'verde',
-    summary: 'Seis camas em beliches, janela para o jardim e clima de troca entre viajantes.',
-    description:
-      '[PREENCHER] Descrição real. Exemplo: dormitório arejado com três beliches de madeira, cortina individual em cada cama e janela para o jardim. Ótimo para quem chega para fazer trilhas e quer conhecer gente da estrada.',
-    capacity: 6,
-    beds: ['3 beliches (6 camas de solteiro)'],
-    bathroom: 'compartilhado',
-    priceFrom: 80,
-    priceUnit: 'pessoa',
-    minNightsHolidays: 3,
-    amenities: ['wifi', 'armario', 'tomada', 'ventilador', 'roupa-de-cama', 'banheiro-compartilhado'],
-    included: [
-      'Roupa de cama',
-      'Armário individual com cadeado',
-      'Ventilador',
-      'Tomada e luz de leitura em cada cama',
-      'Toalha (aluguel à parte) [PREENCHER]',
-    ],
-    photos: [
-      { src: '/fotos/dorm-misto.webp', alt: 'Dormitório com beliches de madeira e janela para as montanhas (imagem ilustrativa)' },
-      { src: ph('dorm-misto-banheiro.svg'), alt: 'Banheiro compartilhado do dormitório misto (foto ilustrativa)' },
-      { src: ph('dorm-misto-vista.svg'), alt: 'Vista da janela para o jardim (foto ilustrativa)' },
-    ],
-  },
-  {
-    id: 'dorm-feminino',
-    slug: 'dormitorio-feminino',
-    name: 'Dormitório Feminino',
-    kind: 'dormitorio',
-    dormGender: 'feminino',
-    accent: 'rosa',
-    summary: 'Quatro camas só para mulheres, com banheiro exclusivo do quarto.',
-    description:
-      '[PREENCHER] Descrição real. Exemplo: dormitório exclusivo para mulheres, com dois beliches, espelho grande, cabideiro e banheiro de uso exclusivo das hóspedes do quarto.',
-    capacity: 4,
-    beds: ['2 beliches (4 camas de solteiro)'],
-    bathroom: 'privativo',
-    priceFrom: 90,
-    priceUnit: 'pessoa',
-    minNightsHolidays: 3,
-    amenities: ['wifi', 'armario', 'tomada', 'ventilador', 'roupa-de-cama', 'toalha', 'banheiro-privativo'],
-    included: [
-      'Roupa de cama',
-      'Toalha',
-      'Armário individual com cadeado',
-      'Ventilador',
-      'Tomada e luz de leitura em cada cama',
-    ],
-    photos: [
-      { src: '/fotos/dorm-feminino.webp', alt: 'Dormitório feminino com beliches de madeira e cortinas rosadas (imagem ilustrativa)' },
-      { src: ph('dorm-feminino-banheiro.svg'), alt: 'Banheiro exclusivo do dormitório feminino (foto ilustrativa)' },
-      { src: ph('dorm-feminino-vista.svg'), alt: 'Vista das montanhas a partir do quarto (foto ilustrativa)' },
-    ],
-  },
-  {
-    id: 'quarto-casal',
-    slug: 'quarto-casal',
-    name: 'Quarto Casal',
+    id: 'quarto-duplo',
+    slug: 'quarto-duplo',
+    name: 'Quarto Duplo',
     kind: 'privativo',
     accent: 'pessego',
-    summary: 'Cama de casal, banheiro privativo e uma varandinha para ver o morro.',
+    summary: 'Quarto privativo com cama de casal, para até duas pessoas. Sozinho, a diária sai a partir de R$ 86.',
     description:
-      '[PREENCHER] Descrição real. Exemplo: quarto privativo aconchegante com cama de casal, banheiro próprio e varanda com rede para descansar depois da trilha.',
+      '[PREENCHER] Descrição real do quarto. Ex.: como é o quarto, a vista, se tem janela para a mata, ventilador, onde fica o banheiro.',
     capacity: 2,
     beds: ['1 cama de casal'],
-    bathroom: 'privativo',
-    priceFrom: 220,
+    bathroom: 'comunitário',
+    priceFrom: 126,
     priceUnit: 'quarto',
-    minNightsHolidays: 3,
-    amenities: ['wifi', 'ventilador', 'tomada', 'roupa-de-cama', 'toalha', 'banheiro-privativo', 'varanda'],
-    included: ['Roupa de cama', 'Toalhas', 'Ventilador', 'Tomadas ao lado da cama', 'Varanda com rede'],
+    minNightsHolidays: 3, // [PREENCHER] confirmar
+    amenities: comodidades,
+    included: incluso,
     photos: [
-      { src: '/fotos/quarto-casal.webp', alt: 'Quarto casal com cama de casal e janela para o morro (imagem ilustrativa)' },
-      { src: ph('casal-banheiro.svg'), alt: 'Banheiro privativo do quarto casal (foto ilustrativa)' },
-      { src: ph('casal-vista.svg'), alt: 'Varanda com rede e vista para o morro (foto ilustrativa)' },
+      foto('quarto-duplo-1', 'Quarto com colcha de mandalas, janela grande para a mata, vitral em forma de folha e estante de madeira'),
+      foto('quarto-duplo-2', 'Vista da cama para a janela, com árvores, flores amarelas e céu azul'),
+      foto('quarto-duplo-3', 'Cama de casal com colcha florida e janela de madeira com cortina branca'),
+      foto('quarto-duplo-4', 'Cama de casal com colcha florida entre a janela de madeira e uma luminária de chão'),
+      foto('quarto-duplo-5', 'Janela em arco com portinhola de madeira aberta para as árvores, ventilador e cabide na parede'),
     ],
   },
   {
-    id: 'quarto-familia',
-    slug: 'quarto-familia',
-    name: 'Quarto Família',
-    kind: 'privativo',
-    accent: 'azul',
-    summary: 'Espaço para até quatro pessoas: cama de casal e beliche, com banheiro privativo.',
+    id: 'tenda',
+    slug: 'tenda',
+    name: 'Tenda',
+    feminine: true,
+    kind: 'tenda',
+    accent: 'verde',
+    summary: 'Uma tenda só sua, para até duas pessoas, para dormir pertinho da natureza.',
     description:
-      '[PREENCHER] Descrição real. Exemplo: quarto amplo para famílias ou grupos de amigos, com cama de casal, um beliche, mesa pequena e banheiro privativo.',
-    capacity: 4,
-    beds: ['1 cama de casal', '1 beliche (2 camas de solteiro)'],
-    bathroom: 'privativo',
-    priceFrom: 340,
-    priceUnit: 'quarto',
-    minNightsHolidays: 4,
-    amenities: ['wifi', 'ventilador', 'tomada', 'roupa-de-cama', 'toalha', 'banheiro-privativo'],
-    included: ['Roupa de cama', 'Toalhas', 'Ventilador', 'Tomadas individuais', 'Armário grande'],
+      '[PREENCHER] Descrição real da tenda. Ex.: onde ficam as tendas, se são cobertas, o que tem dentro, onde fica o banheiro.',
+    capacity: 2,
+    beds: ['1 cama de solteiro'], // [PREENCHER] confirmar a cama quando são 2 pessoas
+    // [PREENCHER] o preço é o do Booking para 1 pessoa; confirmar o valor para 2
+    bathroom: 'comunitário',
+    priceFrom: 52,
+    priceUnit: 'pessoa',
+    minNightsHolidays: 3, // [PREENCHER] confirmar
+    amenities: comodidades,
+    included: incluso,
     photos: [
-      { src: '/fotos/quarto-familia.webp', alt: 'Quarto família com cama de casal e beliche (imagem ilustrativa)' },
-      { src: ph('familia-banheiro.svg'), alt: 'Banheiro privativo do quarto família (foto ilustrativa)' },
-      { src: ph('familia-vista.svg'), alt: 'Vista do jardim a partir do quarto família (foto ilustrativa)' },
+      foto('tenda-1', 'Tendas cobertas por lonas azuis e cinzas entre as árvores, com chão de terra sombreado'),
+      foto('tenda-2', 'Barraca azul montada debaixo de uma lona, no meio das árvores'),
+      foto('tenda-3', 'Interior da barraca com colchão de solteiro, lençol, travesseiro e toalha dobrada'),
+    ],
+  },
+  {
+    id: 'dormitorio',
+    slug: 'dormitorio',
+    name: 'Dormitório',
+    kind: 'dormitorio',
+    dormGender: 'misto', // [PREENCHER] confirmar se é misto
+    accent: 'azul',
+    summary: 'Cama de solteiro em dormitório compartilhado, para quem viaja leve e gosta de conhecer gente da estrada.',
+    description:
+      '[PREENCHER] Descrição real do dormitório. Ex.: quantas camas, se são beliches, armário, tomada, onde fica o banheiro.',
+    capacity: 6, // [PREENCHER] nº de camas do dormitório
+    beds: ['Cama de solteiro (preço por cama)'],
+    bathroom: 'comunitário',
+    priceFrom: 65,
+    priceUnit: 'pessoa',
+    minNightsHolidays: 3, // [PREENCHER] confirmar
+    amenities: comodidades,
+    included: incluso,
+    photos: [
+      foto('dormitorio-1', 'Beliche de madeira com escada, iluminado pelo sol, e um gato na porta que dá para a sala'),
+      foto('dormitorio-2', 'Cama de solteiro com lençol azul, estante de madeira e janela para as bananeiras'),
+      foto('dormitorio-3', 'Beliche de madeira com escada, lençóis azul e rosa e uma estante ao lado'),
     ],
   },
 ]
