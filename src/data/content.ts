@@ -136,6 +136,7 @@ export const partnerGuides = {
       text: '14 anos de Chapada Diamantina. Condutora de visitantes no Vale do Capão e no Vale do Pati.',
       phoneDisplay: '(75) 98315-7024',
       whatsapp: '5575983157024',
+      instagram: { handle: '@keillacalmongui', url: 'https://instagram.com/keillacalmongui' },
       message: `Olá, Keilla! Peguei seu contato no site do ${siteConfig.name}. Gostaria de saber sobre as trilhas no Vale do Capão e no Vale do Pati.`,
     },
   ] satisfies PartnerContact[],
