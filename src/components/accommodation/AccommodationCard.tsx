@@ -1,7 +1,8 @@
 import { Link } from 'react-router'
 import type { Accommodation } from '../../types'
-import { formatPrice, kindLabel } from '../../lib/format'
+import { kindLabel } from '../../lib/format'
 import { plural } from '../../lib/dates'
+import { buttonClasses } from '../ui/Button'
 import { Icon } from '../ui/Icon'
 import { LazyImage } from '../ui/LazyImage'
 import { Tag } from '../ui/Tag'
@@ -57,17 +58,11 @@ export function AccommodationCard({ accommodation: acc, query }: Props) {
 
         <AmenityList items={acc.amenities} compact />
 
-        <div className="mt-auto space-y-3 border-t border-dashed border-marrom/35 pt-4">
-          <div className="flex items-end justify-between gap-3">
-            <p className="text-sm leading-tight">
-              a partir de
-              <span className="block font-display text-2xl font-bold text-terracota">{formatPrice(acc.priceFrom)}</span>
-              {acc.kind === 'tenda' ? 'por tenda' : `por ${acc.priceUnit}`} / noite
-            </p>
-            <span className="flex items-center gap-1 text-sm font-bold text-terracota-escuro" aria-hidden="true">
-              Ver detalhes <Icon name="seta-direita" size={18} />
-            </span>
-          </div>
+        <div className="mt-auto border-t border-dashed border-marrom/35 pt-4">
+          {/* só visual: o clique é do link do título, que cobre o card */}
+          <span className={buttonClasses('primary', 'md', 'w-full group-hover:bg-laranja-queimado')} aria-hidden="true">
+            Ver detalhes <Icon name="seta-direita" size={18} />
+          </span>
         </div>
       </div>
     </article>

@@ -105,10 +105,50 @@ export const experiences: Experience[] = [
   },
 ]
 
-/* Fora do site por enquanto. Para voltar, renderize de novo em sections/Valley.tsx. */
+/** Contato indicado pelo hostel. O telefone abre o WhatsApp. */
+export interface PartnerContact {
+  name: string
+  text: string
+  phoneDisplay: string
+  /** Apenas números, com DDI e DDD */
+  whatsapp: string
+  message: string
+  email?: string
+  instagram?: { handle: string; url: string }
+  /** destaque, ex.: desconto para hóspedes */
+  perk?: string
+}
+
 export const partnerGuides = {
   title: 'Guias parceiros',
-  text: '[PREENCHER] Nomes e contatos dos guias locais que vocês indicam. Trilhas longas, como o Pati e a Fumaça por baixo, pedem guia credenciado.',
+  text: 'Trilhas longas, como o Pati e a Fumaça por baixo, pedem guia credenciado. Estas são as condutoras que indicamos:',
+  guides: [
+    {
+      name: 'Cris',
+      text: 'Condutora em todas as zonas turísticas do Capão.',
+      phoneDisplay: '(11) 95025-0669',
+      whatsapp: '5511950250669',
+      email: 'crismoreira.condutora@gmail.com',
+      message: `Olá, Cris! Peguei seu contato no site do ${siteConfig.name}. Gostaria de saber sobre as trilhas no Vale do Capão.`,
+    },
+    {
+      name: 'Keilla Calmon',
+      text: '14 anos de Chapada Diamantina. Condutora de visitantes no Vale do Capão e no Vale do Pati.',
+      phoneDisplay: '(75) 98315-7024',
+      whatsapp: '5575983157024',
+      message: `Olá, Keilla! Peguei seu contato no site do ${siteConfig.name}. Gostaria de saber sobre as trilhas no Vale do Capão e no Vale do Pati.`,
+    },
+  ] satisfies PartnerContact[],
+}
+
+export const whereToEat: PartnerContact = {
+  name: 'Ana Sempreviva',
+  text: 'Cozinha de fusão aqui no Vale, a nossa indicação para comer bem.',
+  phoneDisplay: '(75) 98339-3062',
+  whatsapp: '5575983393062',
+  instagram: { handle: '@anasempreviva.cozinhafusao', url: 'https://instagram.com/anasempreviva.cozinhafusao' },
+  perk: 'Hóspedes do Iniã têm 10% OFF',
+  message: `Olá! Peguei seu contato no site do ${siteConfig.name}. Sou hóspede do Iniã e gostaria de mais informações.`,
 }
 
 export const villageTips = [
@@ -118,7 +158,7 @@ export const villageTips = [
   'A vila é pequena e dá para fazer quase tudo a pé. À noite, a rua principal ganha vida com restaurantes e empórios.',
   'Toda quinta e todo domingo tem feira: uma riqueza gastronômica e artesanal do Vale.',
   'Aos domingos tem roda de capoeira no Coreto.',
-  '[PREENCHER] Dicas pessoais: restaurante preferido, pôr do sol favorito…',
+  '[PREENCHER] Dicas pessoais: pôr do sol favorito, um café, um empório…',
 ]
 
 /** Van que faz Palmeiras → Vale do Capão. O número abre o WhatsApp. */

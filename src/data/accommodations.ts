@@ -1,7 +1,7 @@
 import type { Accommodation, AmenityKey } from '../types'
 
 /*
- * As 3 acomodações do hostel, conforme o anúncio no Booking:
+ * As acomodações do hostel (dados de referência do Booking):
  * nome, camas, nº de hóspedes, Wi-Fi e preço "a partir de" (valores de referência do Booking).
  * Fotos reais em public/fotos/. Descrições e o que mais estiver marcado com [PREENCHER] ainda são provisórios.
  */
@@ -15,28 +15,48 @@ const comodidades: AmenityKey[] = ['wifi', 'redario', 'fogueira', 'atividades']
 
 export const accommodations: Accommodation[] = [
   {
-    id: 'quarto-duplo',
-    slug: 'quarto-duplo',
-    name: 'Quarto Duplo',
+    id: 'janelao',
+    slug: 'janelao',
+    name: 'Janelão',
     kind: 'privativo',
     accent: 'pessego',
-    summary: 'Quarto privativo com cama de casal, para até duas pessoas. Sozinho, a diária sai a partir de R$ 86.',
+    summary: 'Quarto privativo com um janelão aberto para a mata, para até duas pessoas.',
     description:
-      '[PREENCHER] Descrição real do quarto. Ex.: como é o quarto, a vista, se tem janela para a mata, ventilador, onde fica o banheiro.',
+      '[PREENCHER] Descrição real do quarto. Ex.: como é o quarto, a vista do janelão, o vitral, ventilador, onde fica o banheiro.',
     capacity: 2,
-    beds: ['1 cama de casal'],
+    beds: ['1 cama de casal'], // [PREENCHER] confirmar a cama
     bathroom: 'comunitário',
-    priceFrom: 126,
+    priceFrom: 126, // [PREENCHER] confirmar (valor do antigo "Quarto Duplo"; o preço não aparece no site)
     priceUnit: 'quarto',
     minNightsHolidays: 3, // [PREENCHER] confirmar
     amenities: comodidades,
     included: incluso,
     photos: [
-      foto('quarto-duplo-1', 'Quarto com colcha de mandalas, janela grande para a mata, vitral em forma de folha e estante de madeira'),
-      foto('quarto-duplo-2', 'Vista da cama para a janela, com árvores, flores amarelas e céu azul'),
-      foto('quarto-duplo-3', 'Cama de casal com colcha florida e janela de madeira com cortina branca'),
-      foto('quarto-duplo-4', 'Cama de casal com colcha florida entre a janela de madeira e uma luminária de chão'),
-      foto('quarto-duplo-5', 'Janela em arco com portinhola de madeira aberta para as árvores, ventilador e cabide na parede'),
+      foto('janelao-1', 'Quarto com colcha de mandalas, janela grande para a mata, vitral em forma de folha e estante de madeira'),
+      foto('janelao-2', 'Vista da cama para o janelão, com árvores, flores amarelas e céu azul'),
+    ],
+  },
+  {
+    id: 'rustico',
+    slug: 'rustico',
+    name: 'Rústico',
+    kind: 'privativo',
+    accent: 'rosa',
+    summary: 'Quarto privativo de madeira e janelas para a mata, para até duas pessoas.',
+    description:
+      '[PREENCHER] Descrição real do quarto. Ex.: como é o quarto, as janelas, ventilador, onde fica o banheiro.',
+    capacity: 2,
+    beds: ['1 cama de casal'], // [PREENCHER] confirmar a cama
+    bathroom: 'comunitário',
+    priceFrom: 126, // [PREENCHER] confirmar (valor do antigo "Quarto Duplo"; o preço não aparece no site)
+    priceUnit: 'quarto',
+    minNightsHolidays: 3, // [PREENCHER] confirmar
+    amenities: comodidades,
+    included: incluso,
+    photos: [
+      foto('rustico-1', 'Cama de casal com colcha florida entre a janela de madeira e uma luminária de chão'),
+      foto('rustico-2', 'Janela em arco com portinhola de madeira aberta para as árvores, ventilador e cabide na parede'),
+      foto('rustico-3', 'Cama de casal com colcha florida e janela de madeira com cortina branca'),
     ],
   },
   {
@@ -59,7 +79,8 @@ export const accommodations: Accommodation[] = [
     amenities: comodidades,
     included: incluso,
     photos: [
-      foto('tenda-1', 'Tendas cobertas por lonas azuis e cinzas entre as árvores, com chão de terra sombreado'),
+      foto('tenda-capa', 'Barraca azul montada debaixo de uma lona azul, no meio das árvores, com o chão coberto de folhas secas'),
+      foto('tenda-1','Tendas cobertas por lonas azuis e cinzas entre as árvores, com chão de terra sombreado'),
       foto('tenda-2', 'Barraca azul montada debaixo de uma lona, no meio das árvores'),
       foto('tenda-3', 'Interior da barraca com colchão de solteiro, lençol, travesseiro e toalha dobrada'),
     ],

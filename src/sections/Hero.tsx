@@ -5,9 +5,9 @@ export function Hero() {
   return (
     <section aria-labelledby="hero-title" className="relative">
       <div className="relative flex min-h-[78svh] items-end overflow-hidden px-4 pt-16 pb-36 sm:px-6 md:min-h-[82vh] md:items-center md:pb-40">
-        {/* Morro ao pôr do sol. Original em fotos-originais/hero-morro.png; a versão de celular é um recorte vertical centrado no morro */}
+        {/* Casa do hostel entre as árvores. Original em fotos-originais/hero-casa.png; a versão de celular é um recorte vertical centrado na casa */}
         <picture>
-          <source media="(min-width: 768px)" srcSet="/fotos/hero-desktop.webp" width={1774} height={887} />
+          <source media="(min-width: 768px)" srcSet="/fotos/hero-desktop.webp" width={1448} height={724} />
           <img
             src="/fotos/hero-mobile.webp"
             alt=""

@@ -1,7 +1,7 @@
 import { Link, useLocation, useParams } from 'react-router'
 import { siteConfig } from '../config/site'
 import { getAccommodationBySlug } from '../data/accommodations'
-import { formatPrice, kindLabel } from '../lib/format'
+import { kindLabel } from '../lib/format'
 import { plural } from '../lib/dates'
 import { AmenityList } from '../components/accommodation/AmenityList'
 import { Gallery } from '../components/accommodation/Gallery'
@@ -91,12 +91,9 @@ export function AccommodationDetail() {
 
               <section aria-labelledby="preco-title" className="rounded-artesanal border border-marrom/25 bg-creme-claro p-5">
                 <h2 id="preco-title" className="mb-2 text-2xl">
-                  Preço
+                  Valores
                 </h2>
-                <p>
-                  A partir de <strong className="font-display text-2xl text-terracota">{formatPrice(acc.priceFrom)}</strong>{' '}
-                  {acc.kind === 'tenda' ? 'pela tenda' : acc.priceUnit === 'pessoa' ? 'por pessoa' : 'pelo quarto'}, por noite.
-                </p>
+                <p>Consulte o valor da diária para as suas datas pelo WhatsApp.</p>
                 <p className="mt-2 flex items-start gap-2 text-sm">
                   <Icon name="calendario" size={18} className="mt-0.5 shrink-0 text-terracota-escuro" />
                   Em feriados e datas especiais, a estadia mínima é de {plural(acc.minNightsHolidays, 'noite', 'noites')}.
